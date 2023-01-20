@@ -8,8 +8,13 @@
 --active-color: #404BBF;
 --paragraph-color: #434455;
 --light-bgc: #F4F4FD;
+--overlay: rgba(46, 47, 66, 0.7);
+--shadow-color: 
+    0px 1px 6px rgba(46, 47, 66, 0.08), 
+    0px 1px 1px rgba(46, 47, 66, 0.16), 
+    0px 2px 1px rgba(46, 47, 66, 0.08);
+--helper-color: #8E8F99;
 }
-
 
 h1, h2, h3, h4, p {
     margin-top: 0;
@@ -102,10 +107,7 @@ body{
     padding-top: 24px;
     padding-bottom: 24px;
     border-bottom: 1px solid var(--primary-accent-color);
-    box-shadow: 
-    0px 2px 1px rgba(46, 47, 66, 0.08), 
-    0px 1px 1px rgba(46, 47, 66, 0.16), 
-    0px 1px 6px rgba(46, 47, 66, 0.08);
+    box-shadow: var(--shadow-color);
 }
 
 .header-container {
@@ -188,8 +190,8 @@ body{
     padding-bottom: 188px;
     text-align: center;
     background-image: 
-    linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(../images/hero-bcg.jpg);
+    linear-gradient(var(--overlay), var(--overlay)),
+    url(../images/hero/hero-bcg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -237,7 +239,7 @@ body{
     display: flex;
     justify-content: center;
     margin-bottom: 8px;
-    background-color: #F4F4FD;
+    background-color: var(--light-bgc);
     border-radius: 4px;
 
 }
@@ -298,15 +300,11 @@ body{
 .team-item {
    background-color: var(--primary-color);
    text-align: center; 
-   box-shadow: 
-   0px 1px 6px rgba(46, 47, 66, 0.08), 
-   0px 1px 1px rgba(46, 47, 66, 0.16), 
-   0px 2px 1px rgba(46, 47, 66, 0.08);
-   border-radius: 0px 0px 4px 4px;
+   box-shadow: var(--shadow-color);
 }
 
 .team-description {
-padding: 32px 16px;
+    padding: 32px 16px;
 }
 
 .team-soc-list {
@@ -335,6 +333,53 @@ padding: 32px 16px;
     background-color: var(--active-color);
 }
 
+.team-soc-icon {
+    fill: var(--light-bgc);
+}
+
+/* ========== CUSTOMERS ========== */
+
+.customers {
+    padding-top: 130px;
+    padding-bottom: 120px;
+}
+
+.container {
+    
+    
+}
+.customers-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 72px;
+
+}
+.customers-item {
+    width: calc((100% - 120px) / 6);
+    height: 88px;
+}
+
+.customers-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border: 1px solid var(--helper-color);
+    border-radius: 4px;
+    justify-content: center;
+    text-align: center;
+    padding: 16px 32px;
+    color: var(--helper-color);
+}
+
+.customer-icon {
+    fill: currentColor;
+}
+
+.customers-link:is(:hover, :focus, :active) {
+    border: 1px solid var(--active-color);
+    color: var(--active-color);
+}
 
 /* ========== FOOTER========== */
 
@@ -342,10 +387,13 @@ padding: 32px 16px;
     background-color: var(--secondary-color);
     padding-top: 100px;
     padding-bottom: 100px;
+    display: flex;
 }
 
 .footer-container {
-
+    display: flex;
+    gap: 120px;
+    align-items: baseline;
 }
 
 .footer-logo {
@@ -368,6 +416,51 @@ padding: 32px 16px;
     margin-top: 16px;
     max-width: 264px;
 }
+
+.footer-soc {
+}
+
+.footer-soc-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--primary-color);
+}
+
+
+
+.footer-soc-list {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+
+
+}
+.footer-soc-item {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-soc-link {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-icon {
+    fill: var(--light-bgc);
+}
+
+.footer-soc-link:is(:hover, :focus, :active) {
+    background-color: #31D0AA;
+}
+
 
 /* ========== FILTER========== */
 
@@ -408,7 +501,6 @@ padding: 32px 16px;
     column-gap: 24px;
     row-gap: 48px;
     flex-wrap: wrap;
-    cursor: pointer;
 }
 
 .section-item {
@@ -417,14 +509,16 @@ padding: 32px 16px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-.section-item:hover {
+.section-link {
+}
+
+
+.section-item:hover,
+.section-item:focus,
+.section-item:active {
     cursor: pointer;
     border: 0.5px solid var(--light-bgc);
-    box-shadow: 
-    0px 1px 6px rgba(46, 47, 66, 0.08), 
-    0px 1px 1px rgba(46, 47, 66, 0.16), 
-    0px 2px 1px rgba(46, 47, 66, 0.08);
-
+    box-shadow: var(--shadow-color);
 }
 
 .section-discription{
