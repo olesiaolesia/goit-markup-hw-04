@@ -240,16 +240,16 @@ body{
 .features-icon-list {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-bottom: 8px;
     background-color: var(--light-bgc);
     border-radius: 4px;
-
+    height: 112px;
 }
 
 .features-icon {
     width: 64px;
     height: 64px;
-    margin: 24px 100px;
 }
 
 
@@ -369,8 +369,7 @@ body{
     border: 1px solid var(--helper-color);
     border-radius: 4px;
     justify-content: center;
-    text-align: center;
-    padding: 16px 32px;
+    align-items: center;
     color: var(--helper-color);
 }
 
@@ -394,8 +393,8 @@ body{
 
 .footer-container {
     display: flex;
-    gap: 120px;
     align-items: baseline;
+
 }
 
 .footer-logo {
@@ -420,6 +419,7 @@ body{
 }
 
 .footer-soc {
+    margin-left: 120px;
 }
 
 .footer-soc-title {
@@ -511,21 +511,20 @@ body{
 }
 
 .section-item {
+    display: flex;
     flex-basis: calc((100% - 2*24px)/3);
+}
+
+.section-link {
+    display: block;
     border: 1px solid var(--primary-accent-color);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-.section-item:hover,
-.section-item:focus,
-.section-item:active {
-    cursor: pointer;
-    border: 0.5px solid var(--light-bgc);
+.section-link:hover,
+.section-link:focus {
     box-shadow: var(--shadow-color);
-}
-
-.section-link {
-    
+    border: 0.5px solid var(--light-bgc);
 }
 
 .section-discription{
@@ -535,5 +534,4 @@ body{
     border-top: none;
     border-right: 1px solid var(--primary-accent-color);
     border-left: 1px solid var(--primary-accent-color);
-    border-bottom: 1px solid var(--primary-accent-color);
 }
