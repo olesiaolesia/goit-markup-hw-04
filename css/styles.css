@@ -16,6 +16,14 @@
 --helper-color: #8E8F99;
 }
 
+body {
+    background-color: var(--primary-color);
+    font-family: var(--primary-font);
+    font-size: 16px;
+}
+
+/* ==========RESET========== */
+
 h1, h2, h3, h4, p {
     margin-top: 0;
     margin-bottom: 0;
@@ -49,19 +57,13 @@ button {
     text-decoration: none;
 }
 
-body{
-    background-color: var(--primary-color);
-    font-family: var(--primary-font);
-    font-size: 16px;
-}
+/* ==========COMPONENTS========== */
 
 .container {
     width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
 }
-
-/* ==========COMPONENTS========== */
 
 .section {
     padding-top: 120px;
@@ -113,7 +115,6 @@ body{
 .header-container {
     display: flex;
     align-items: center;
-    
 }
 
 .header-nav {
@@ -126,10 +127,6 @@ body{
     display: flex;
     align-items: center;
     gap:40px;
-}
-
-.menu-item {
-
 }
 
 .header-logo {
@@ -167,9 +164,6 @@ body{
     gap: 40px;
 }
 
-.contacts-item {
-}
-
 .contacts-link {
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -197,10 +191,6 @@ body{
     background-size: contain;
     background-position: center;
     margin: 0 auto;
-}
-
-.hero-content {
- 
 }
 
 .hero-title {
@@ -251,7 +241,6 @@ body{
     width: 64px;
     height: 64px;
 }
-
 
 .features-list {
     display: flex;
@@ -346,10 +335,6 @@ body{
     padding-bottom: 120px;
 }
 
-.container {
-    
-    
-}
 .customers-list {
     display: flex;
     justify-content: center;
@@ -394,7 +379,6 @@ body{
 .footer-container {
     display: flex;
     align-items: baseline;
-
 }
 
 .footer-logo {
@@ -405,7 +389,6 @@ body{
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--secondary-accent-color);
-
 }
 
 .footer-logo-span {
@@ -437,9 +420,8 @@ body{
     justify-content: center;
     gap: 16px;
     margin-top: 16px;
-
-
 }
+
 .footer-soc-item {
     width: 40px;
     height: 40px;
@@ -517,21 +499,17 @@ body{
 
 .section-link {
     display: block;
-    border: 1px solid var(--primary-accent-color);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+    border-left: 1px solid var(--primary-accent-color);
 }
 
 .section-link:hover,
 .section-link:focus {
     box-shadow: var(--shadow-color);
-    border: 0.5px solid var(--light-bgc);
 }
 
 .section-discription{
     padding-top: 32px ;
     padding-bottom: 32px;
     padding-left: 16px;
-    border-top: none;
-    border-right: 1px solid var(--primary-accent-color);
-    border-left: 1px solid var(--primary-accent-color);
 }
